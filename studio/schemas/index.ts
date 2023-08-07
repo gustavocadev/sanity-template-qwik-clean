@@ -1,3 +1,4 @@
-import pet from './pet'
+import postType from './post'
+import blockContentType from './blockContent'
 
-export const schemaTypes = [pet]
+export const schemaTypes = [postType, blockContentType]
