@@ -1,7 +1,7 @@
 import { createClient } from '@sanity/client';
 
-const PUBLIC_SANITY_DATASET = import.meta.env.VITE_SANITY_DATASET;
-const PUBLIC_SANITY_PROJECT_ID = import.meta.env.VITE_SANITY_PROJECT_ID;
+const PUBLIC_SANITY_DATASET = import.meta.env.PUBLIC_SANITY_DATASET;
+const PUBLIC_SANITY_PROJECT_ID = import.meta.env.PUBLIC_SANITY_PROJECT_ID;
 
 if (!PUBLIC_SANITY_PROJECT_ID || !PUBLIC_SANITY_DATASET) {
   throw new Error('Did you forget to run sanity init --env?');
