@@ -34,7 +34,7 @@ The following commands are meant to be run in **both** the `/app` and `/studio` 
 4. Prefix your environment variables in the SvelteKit `/app` folder with `PUBLIC_`, they should be `PUBLIC_SANITY_DATASET` and `PUBLIC_SANITY_PROJECT_ID`.
 5. `pnpm run dev` to start the development server
 
-Your SvelteKit app should now be running on [http://localhost:5173/](http://localhost:5173/) and Studio on [http://localhost:3333/](http://localhost:3333/).
+Your Qwik app should now be running on [http://localhost:5173/](http://localhost:5173/) and Studio on [http://localhost:3333/](http://localhost:3333/).
 
 _Feel free to move each of the folders to their own location and check them into version control._
 
