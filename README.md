@@ -5,7 +5,7 @@ This starter uses [Qwik](https://qwik.builder.io/) for the frontend and [Sanity]
 ## Featuring
 
 - How to fetch content as data from [the Sanity Content Lake](https://www.sanity.io/docs/datastore)
-- How to render block content with [Portable Text](https://www.sanity.io/docs/presenting-block-text) \*The library has not an implementation available for Qwik\*.
+- How to render block content with [Portable Text](https://www.sanity.io/docs/presenting-block-text)
 - A [Sanity Studio](https://www.sanity.io/docs/sanity-studio) to create and edit content
 - How to crop and render images with [Sanity Image URLs](https://www.sanity.io/docs/image-url)
 
@@ -37,6 +37,13 @@ The following commands are meant to be run in **both** the `/app` and `/studio` 
 Your Qwik app should now be running on [http://localhost:5173/](http://localhost:5173/) and Studio on [http://localhost:3333/](http://localhost:3333/).
 
 _Feel free to move each of the folders to their own location and check them into version control._
+
+### Add content
+
+1. Visit the Studio and create and publish a new `Post` document
+2. Visit the App and refresh the page to see your content rendered on the page
+
+The schema for the `Post` document is defined in the `/studio/schemas` folder. You can add more documents and schemas to the Studio to suit your needs.
 
 ## Deployments
 
