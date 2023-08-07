@@ -38,13 +38,6 @@ Your Qwik app should now be running on [http://localhost:5173/](http://localhost
 
 _Feel free to move each of the folders to their own location and check them into version control._
 
-### Add content
-
-1. Visit the Studio and create and publish a new `Post` document
-2. Visit the App and refresh the page to see your content rendered on the page
-
-The schema for the `Post` document is defined in the `/studio/schemas` folder. You can add more documents and schemas to the Studio to suit your needs.
-
 ## Deployments
 
 The `/app` and `/studio` folders are meant to be deployed separately.
