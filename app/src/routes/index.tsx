@@ -1,30 +1,31 @@
 import { component$ } from '@builder.io/qwik';
-import { routeLoader$, type DocumentHead } from '@builder.io/qwik-city';
-import { client } from '~/lib/sanity';
+import { routeLoader$, type DocumentHead, Link } from '@builder.io/qwik-city';
+import { getPosts } from '../lib/sanity.queries';
 
-export const usePets = routeLoader$(async () => {
-  const data = await client.fetch(`*[_type == "pet"]`);
+export const usePosts = routeLoader$(async () => {
+  const posts = await getPosts();
 
-  if (data) {
-    return {
-      pets: data,
-    };
-  }
-  return {
-    pets: [],
-  };
+  return posts;
 });
 
 export default component$(() => {
+  const posts = usePosts();
+
   return (
-    <>
-      <h1>Hi 👋</h1>
-      <p>
-        Can't wait to see what you build with qwik!
-        <br />
-        Happy coding.
-      </p>
-    </>
+    <ul class="list-decimal">
+      {posts.value.map((post) => {
+        return (
+          <li key={post._id}>
+            <Link
+              href={`/post/${post.slug.current}/`}
+              class="hover:underline text-2xl"
+            >
+              {post.title}
+            </Link>
+          </li>
+        );
+      })}
+    </ul>
   );
 });
 
