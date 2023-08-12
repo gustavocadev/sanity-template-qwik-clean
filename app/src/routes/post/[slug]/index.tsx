@@ -2,7 +2,7 @@ import { component$ } from '@builder.io/qwik';
 import { routeLoader$ } from '@builder.io/qwik-city';
 import { QPortableText } from '~/integrations/react/portableText';
 import { getPost } from '~/lib/sanity.queries';
-import { urlFor } from '~/lib/sanity.image';
+import { urlForImage } from '~/lib/sanity.image';
 
 export const usePost = routeLoader$(({ params }) => {
   const slug = params.slug;
@@ -17,7 +17,7 @@ export default component$(() => {
     <section>
       <figure>
         <img
-          src={urlFor(post.value.mainImage!).width(500).height(300).url()}
+          src={urlForImage(post.value.mainImage!).width(500).height(300).url()}
           alt={`Cover image for ${post.value.title}`}
           width={500}
           height={300}
